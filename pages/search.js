@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
 import InfoCard from '../components/InfoCard/InfoCard';
+import Map from '../components/Map/Map';
 
 function Search({ searchResults }) {
   const router = useRouter();
@@ -49,6 +50,9 @@ function Search({ searchResults }) {
               )
             )}
           </div>
+        </section>
+        <section className="hidden xl:inline-flex xl:min-w-[600px]">
+          <Map searchResults={searchResults} />
         </section>
       </main>
       <Footer />
